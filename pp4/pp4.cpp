@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include<cmath>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
 /*intodawanie(int a, int b); //funkcja (zwracajaca wynik typu int)
 void wyswietlanie(int a, int b); //funkcja bedaca procedura :)*/
@@ -177,6 +179,7 @@ void wyswietlanie(int a, int b) {
 int sn;
 cout << "jaki jest dzisiaj szczesliwy numerek?: ", cin >> sn;
 
+
 }
 void czesc(string imie) {
 	cout << "czesc " << imie << endl;
@@ -324,5 +327,15 @@ int dwa(int a) {
 	return dwa;
 }
 float numerek(int n) {
-
+	srand(time(NULL));
+	int los[10];
+	for (int i = 0;i <= 10;i++) {
+		los[i] = (rand() % 10) + 1;
+	}
+	int iloscn;
+	for (int j;j <= 10, j++) {
+		if (los[j] == n) {
+			iloscn++;
+		}
+	}
 }
